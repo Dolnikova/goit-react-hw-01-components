@@ -1,7 +1,6 @@
 import { ContainerStatistics } from 'styles/Statistics.styled';
 import { StatList } from 'styles/Statistics.styled';
 export const Statistics = ({ statistics }) => {
-  const { title, stats } = statistics;
   return (
     <ContainerStatistics>
       <section class="statistics">
