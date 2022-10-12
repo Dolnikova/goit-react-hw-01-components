@@ -1,0 +1,36 @@
+.itemFriends {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid darkgray;
+  width: 150px;
+}
+
+.itemFriends:hover {
+  transform: scale(1.03);
+}
+.statusFriends {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+
+  background-color: gray;
+  margin-right: 10px;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+.nameFriends {
+  font-weight: 500;
+}

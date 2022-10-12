@@ -1,0 +1,19 @@
+.quantity {
+  font-weight: 700;
+}
+.name {
+  font-weight: 700;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.tag {
+  margin-bottom: 10px;
+  color: #87888a;
+}
+
+.location {
+  margin-bottom: 30px;
+  color: #87888a;
+}
