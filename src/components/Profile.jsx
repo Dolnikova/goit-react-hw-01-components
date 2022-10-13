@@ -3,29 +3,28 @@ import { ContainerProfile } from 'styles/Profile.styled';
 import { Description } from 'styles/Profile.styled';
 import { BlockStats } from 'styles/Profile.styled';
 import { Imeg } from 'styles/Profile.styled';
-export const Profile = ({ profile }) => {
-  const { username, tag, location, avatar, stats } = profile;
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <ContainerProfile class="profile">
-      <Description class="description">
-        <Imeg src={avatar} alt="User avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
+    <ContainerProfile className="profile">
+      <Description className="description">
+        <Imeg src={avatar} alt="User avatar" className="avatar" />
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </Description>
       <BlockStats>
-        <ul class="stats">
+        <ul className="stats">
           <Stats>
-            <span class="label">Followers</span>
-            <span class="quantity">{stats.followers}</span>
+            <span className="label">Followers</span>
+            <span className="quantity">{stats.followers}</span>
           </Stats>
           <Stats>
-            <span class="label">Views</span>
-            <span class="quantity">{stats.views}</span>
+            <span className="label">Views</span>
+            <span className="quantity">{stats.views}</span>
           </Stats>
           <Stats>
-            <span class="label">Likes</span>
-            <span class="quantity">{stats.likes}</span>
+            <span className="label">Likes</span>
+            <span className="quantity">{stats.likes}</span>
           </Stats>
         </ul>
       </BlockStats>

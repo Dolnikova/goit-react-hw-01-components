@@ -13,7 +13,7 @@ export const StatList = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60px;
+  width: 44px;
   padding: 10px;
   color: white;
   background-color: ${randomBgColor};

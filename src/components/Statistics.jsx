@@ -1,28 +1,20 @@
 import { ContainerStatistics } from 'styles/Statistics.styled';
 import { StatList } from 'styles/Statistics.styled';
-export const Statistics = ({ statistics }) => {
+export const Statistics = ({ statistics, title }) => {
   return (
     <ContainerStatistics>
-      <section class="statistics">
-        <h2 class="title">UPLOAD STATS</h2>
+      <section className="statistics" title={title}>
+        <h2 className="title">UPLOAD STATS</h2>
 
-        <ul class="stat-list">
-          <StatList class="item">
-            <span class="label">.docx</span>
-            <span class="percentage">4%</span>
-          </StatList>
-          <StatList class="item">
-            <span class="label">.mp3</span>
-            <span class="percentage">14%</span>
-          </StatList>
-          <StatList class="item">
-            <span class="label">.pdf</span>
-            <span class="percentage">41%</span>
-          </StatList>
-          <StatList class="item">
-            <span class="label">.mp4</span>
-            <span class="percentage">12%</span>
-          </StatList>
+        <ul className="stat-list">
+          {statistics.map(({ id, label, percentage }) => {
+            return (
+              <StatList className="item" key={id}>
+                <span className="label">{label}</span>
+                <span className="percentage">{percentage}</span>
+              </StatList>
+            );
+          })}
         </ul>
       </section>
     </ContainerStatistics>
