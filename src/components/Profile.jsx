@@ -1,3 +1,4 @@
+import { default as PropTypes } from 'prop-types';
 import { Stats } from 'styles/Profile.styled';
 import { ContainerProfile } from 'styles/Profile.styled';
 import { Description } from 'styles/Profile.styled';
@@ -30,4 +31,10 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       </BlockStats>
     </ContainerProfile>
   );
+};
+Profile.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number),
 };

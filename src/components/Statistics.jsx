@@ -1,11 +1,15 @@
-import { ContainerStatistics } from 'styles/Statistics.styled';
-import { StatList } from 'styles/Statistics.styled';
+import { default as PropTypes } from 'prop-types';
+import {
+  ContainerStatistics,
+  StatList,
+  SectionTitle,
+} from 'styles/Statistics.styled';
 export const Statistics = ({ statistics, title }) => {
   return (
     <ContainerStatistics>
       <section className="statistics" title={title}>
         <h2 className="title">UPLOAD STATS</h2>
-
+        {title ? <SectionTitle>{title}</SectionTitle> : ''}
         <ul className="stat-list">
           {statistics.map(({ id, label, percentage }) => {
             return (
@@ -19,4 +23,14 @@ export const Statistics = ({ statistics, title }) => {
       </section>
     </ContainerStatistics>
   );
+};
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };

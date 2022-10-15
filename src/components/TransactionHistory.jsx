@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { default as PropTypes } from 'prop-types';
 import {
   BoxContent,
   BoxTitle,
@@ -31,4 +31,14 @@ export const TransactionHistory = ({ transactions }) => {
       </BoxContent>
     </table>
   );
+};
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ),
 };

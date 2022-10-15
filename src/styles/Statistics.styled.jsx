@@ -28,3 +28,10 @@ export const StatList = styled.li`
     border-bottom-right-radius: 5px;
   }
 `;
+export const SectionTitle = styled.h2`
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 500;
+`;
